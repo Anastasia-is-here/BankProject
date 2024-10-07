@@ -11,6 +11,12 @@ public class Main {
         account.withdraw(16500);
         account.deposit(50000);
 
+        BankAccount[] accounts = new BankAccount[10];
+        for (int i = 0; i < 10; i++) {
+            accounts[i] = new BankAccount(i, 10000, 5.0);
+        }
+
+
         System.out.println("Баланс: " + account.getBalance());
         account.applyMonthlyInterest();
         System.out.println("Ежемесячные проценты начислены.");

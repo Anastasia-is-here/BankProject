@@ -4,10 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="74dd83ad-843c-4fe6-bd0c-fdb44e453deb" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/Account.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
-    </list>
+    <list default="true" id="74dd83ad-843c-4fe6-bd0c-fdb44e453deb" name="Changes" comment="Переработка некоторых классов" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -63,6 +60,19 @@
       <option name="presentableId" value="Default" />
       <updated>1726826014563</updated>
     </task>
+    <task id="LOCAL-00001" summary="Переработка некоторых классов">
+      <option name="closed" value="true" />
+      <created>1728300247848</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1728300247848</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Переработка некоторых классов" />
+    <option name="LAST_COMMIT_MESSAGE" value="Переработка некоторых классов" />
   </component>
 </project>
