@@ -3,58 +3,49 @@ import java.util.Date;
 public class BankAccount {
     private int id;
     private double balance;
-    private static double annualInterestRate;
+    private double annualInterestRate;
     private Date dateCreated;
 
-    // Безаргументный конструктор
-    public BankAccount() {
-        id = 0;
-        balance = 0;
-        annualInterestRate = 0;
-        dateCreated = new Date();
-    }
-
-    // Конструктор с указанными id и balance
-    public BankAccount(int id, double balance) {
+    public BankAccount(int id, double balance, double annualInterestRate) {
         this.id = id;
         this.balance = balance;
-        annualInterestRate = 0;
-        dateCreated = new Date();
+        this.annualInterestRate = annualInterestRate;
+        this.dateCreated = new Date();
     }
 
-    // Getter и setter методы
+    // Метод для получения ID
     public int getId() {
         return id;
     }
 
+    // Метод для получения баланса
     public double getBalance() {
         return balance;
     }
 
-    public void setBalance(double balance) {
-        this.balance = balance;
-    }
-
-    public static double getAnnualInterestRate() {
+    // Метод для получения годовой процентной ставки
+    public double getAnnualInterestRate() {
         return annualInterestRate;
     }
 
-    public static void setAnnualInterestRate(double rate) {
-        annualInterestRate = rate;
-    }
-
+    // Метод для получения даты создания счета
     public Date getDateCreated() {
         return dateCreated;
     }
 
-    // Метод для получения ежемесячного процента
-    public double getMonthlyInterest() {
-        return balance * (annualInterestRate / 100 / 12);
+    // Метод для начисления ежемесячного процента
+    public void applyMonthlyInterest() {
+        double monthlyInterest = (annualInterestRate / 12) / 100 * balance;
+        balance += monthlyInterest;
     }
 
-    // Метод для снятия средств со счета
+    // Метод для снятия денег
     public void withdraw(double amount) {
-        balance -= amount;
+        if (amount <= balance) {
+            balance -= amount;
+        } else {
+            System.out.println("Недостаточно средств!");
+        }
     }
 
     // Метод для пополнения счета
